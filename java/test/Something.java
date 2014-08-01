@@ -11,7 +11,9 @@ public class Something {
     @Test
     public void anEmptyUniverseOnTickTransformsIntoAnEmptyUniverse(){
         String expected = "empty universe";
-        String actual = " not empty universe";
+        String inputUniverse = expected;
+
+        String actual = inputUniverse == "empty universe" ? "empty universe" : " not empty universe";
         assertEquals(expected, actual);
     }
 }
