@@ -10,6 +10,8 @@ import static junit.framework.Assert.assertEquals;
 public class Something {
     @Test
     public void anEmptyUniverseOnTickTransformsIntoAnEmptyUniverse(){
-        assertEquals("empty universe"," not empty universe");
+        String expected = "empty universe";
+        String actual = " not empty universe";
+        assertEquals(expected, actual);
     }
 }
