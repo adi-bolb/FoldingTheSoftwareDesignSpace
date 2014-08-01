@@ -28,10 +28,14 @@ public class Something {
     }
 
     private String getEmptyUniverse1() {
+        return getEmptyUniverseCommon();
+    }
+
+    private String getEmptyUniverseCommon() {
         return "empty universe";
     }
 
     private String getEmptyUniverse() {
-        return "empty universe";
+        return getEmptyUniverseCommon();
     }
 }
