@@ -19,12 +19,16 @@ public class Something {
 
     @Test
     public void anUniverseWithACellOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = "empty universe";
+        String expected = getEmptyUniverse1();
         String inputUniverse = "universe with one cell";
 
         String actual = inputUniverse == "universe with one cell" ? getEmptyUniverse() : "not empty universe";
 
         assertEquals(expected, actual);
+    }
+
+    private String getEmptyUniverse1() {
+        return "empty universe";
     }
 
     private String getEmptyUniverse() {
