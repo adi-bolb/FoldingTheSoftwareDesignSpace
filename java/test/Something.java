@@ -51,16 +51,20 @@ public class Something {
     }
 
     private String getEmptyUniverse() {
-        String emptyUniverse = "empty " + "universe";
+        String emptyUniverse = "empty " + getUniverseAnother();
         return emptyUniverse;
     }
 
-    private String getUniverse() {
+    private String getUniverseAnother() {
         return "universe";
     }
 
+    private String getUniverse() {
+        return getUniverseAnother();
+    }
+
     private String getNotEmptyUniverse() {
-        String notEmptyUniverse = "not empty " + "universe";
+        String notEmptyUniverse = "not empty " + getUniverseAnother();
         return notEmptyUniverse;
     }
 }
