@@ -31,9 +31,10 @@ public class Something {
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String inputUniverse = "universe with two cells";
+        String universeWithTwoCells = "universe with two cells";
+        String inputUniverse = universeWithTwoCells;
 
-        String actual = inputUniverse == "universe with two cells" ? getEmptyUniverse() : getNotEmptyUniverse();
+        String actual = inputUniverse == universeWithTwoCells ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
