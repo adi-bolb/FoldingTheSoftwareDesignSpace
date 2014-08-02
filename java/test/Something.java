@@ -10,24 +10,24 @@ import static junit.framework.Assert.assertEquals;
 public class Something {
     @Test
     public void anEmptyUniverseOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getEmptyUniverseCommon();
+        String expected = getEmptyUniverse();
         String inputUniverse = expected;
 
-        String actual = inputUniverse == getEmptyUniverseCommon() ? getEmptyUniverseCommon() : " not empty universe";
+        String actual = inputUniverse == getEmptyUniverse() ? getEmptyUniverse() : " not empty universe";
         assertEquals(expected, actual);
     }
 
     @Test
     public void anUniverseWithACellOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getEmptyUniverseCommon();
+        String expected = getEmptyUniverse();
         String inputUniverse = "universe with one cell";
 
-        String actual = inputUniverse == "universe with one cell" ? getEmptyUniverseCommon() : "not empty universe";
+        String actual = inputUniverse == "universe with one cell" ? getEmptyUniverse() : "not empty universe";
 
         assertEquals(expected, actual);
     }
 
-    private String getEmptyUniverseCommon() {
+    private String getEmptyUniverse() {
         return "empty universe";
     }
 
