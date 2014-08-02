@@ -45,7 +45,7 @@ public class Something {
         String universeWithThreeCellsNotNeighbours = getUniverse() + " with three cells not neighbors";
         String inputUniverse = universeWithThreeCellsNotNeighbours;
 
-        String actual = inputUniverse == universeWithThreeCellsNotNeighbours ? getEmptyUniverse() : "not empty universe";
+        String actual = inputUniverse == universeWithThreeCellsNotNeighbours ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
