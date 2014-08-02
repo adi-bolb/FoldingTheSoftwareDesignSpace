@@ -14,6 +14,7 @@ public class Something {
         String inputUniverse = expected;
 
         String actual = inputUniverse.equals(getEmptyUniverse()) ? getEmptyUniverse() : getNotEmptyUniverse();
+
         assertEquals(expected, actual);
     }
 
