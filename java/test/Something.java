@@ -22,7 +22,7 @@ public class Something {
         String expected = getEmptyUniverse();
         String inputUniverse = "universe with one cell";
 
-        String actual = inputUniverse == "universe with one cell" ? getEmptyUniverse() : "not empty universe";
+        String actual = inputUniverse == "universe with one cell" ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
@@ -32,9 +32,13 @@ public class Something {
         String expected = getEmptyUniverse();
         String inputUniverse = "universe with two cells";
 
-        String actual = inputUniverse == "universe with two cells" ? getEmptyUniverse() : "not empty universe";
+        String actual = inputUniverse == "universe with two cells" ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
+    }
+
+    private String getNotEmptyUniverse() {
+        return "not empty universe";
     }
 
     private String getEmptyUniverse() {
