@@ -27,6 +27,11 @@ public class Something {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
+        assertEquals("empty universe", "not empty universe");
+    }
+
     private String getEmptyUniverse() {
         return "empty universe";
     }
