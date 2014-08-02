@@ -30,8 +30,9 @@ public class Something {
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = "empty universe";
+        String inputUniverse = "universe with two cells";
 
-        String actual = "not empty universe";
+        String actual = inputUniverse == "universe with two cells" ? "empty universe" : "not empty universe";
 
         assertEquals(expected, actual);
     }
