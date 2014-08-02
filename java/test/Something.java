@@ -13,7 +13,7 @@ public class Something {
         String expected = getEmptyUniverse();
         String inputUniverse = expected;
 
-        String actual = inputUniverse.equals(getEmptyUniverse()) ? getEmptyUniverse() : " not empty universe";
+        String actual = inputUniverse.equals(getEmptyUniverse()) ? getEmptyUniverse() : getNotEmptyUniverse();
         assertEquals(expected, actual);
     }
 
