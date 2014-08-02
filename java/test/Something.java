@@ -13,7 +13,7 @@ public class Something {
         String expected = getEmptyUniverse();
         String inputUniverse = expected;
 
-        String actual = inputUniverse == getEmptyUniverse() ? getEmptyUniverse() : " not empty universe";
+        String actual = inputUniverse.equals(getEmptyUniverse()) ? getEmptyUniverse() : " not empty universe";
         assertEquals(expected, actual);
     }
 
@@ -23,7 +23,7 @@ public class Something {
         String universeWithOneCell = getUniverse() + " with one cell";
         String inputUniverse = universeWithOneCell;
 
-        String actual = inputUniverse == universeWithOneCell ? getEmptyUniverse() : getNotEmptyUniverse();
+        String actual = inputUniverse.equals(universeWithOneCell) ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
@@ -34,7 +34,7 @@ public class Something {
         String universeWithTwoCells = getUniverse() + " with two cells";
         String inputUniverse = universeWithTwoCells;
 
-        String actual = inputUniverse == universeWithTwoCells ? getEmptyUniverse() : getNotEmptyUniverse();
+        String actual = inputUniverse.equals(universeWithTwoCells) ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
@@ -45,7 +45,7 @@ public class Something {
         String universeWithThreeCellsNotNeighbours = getUniverse() + " with three cells not neighbors";
         String inputUniverse = universeWithThreeCellsNotNeighbours;
 
-        String actual = inputUniverse == universeWithThreeCellsNotNeighbours ? getEmptyUniverse() : getNotEmptyUniverse();
+        String actual = inputUniverse.equals(universeWithThreeCellsNotNeighbours) ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
