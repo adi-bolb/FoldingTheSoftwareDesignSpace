@@ -10,44 +10,44 @@ import static junit.framework.Assert.assertEquals;
 public class Something {
     @Test
     public void anEmptyUniverseOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getEmptyUniverseAnother();
+        String expected = getEmptyUniverse();
         String inputUniverse = expected;
 
-        String actual = inputUniverse == getEmptyUniverseAnother() ? getEmptyUniverseAnother() : " not empty universe";
+        String actual = inputUniverse == getEmptyUniverse() ? getEmptyUniverse() : " not empty universe";
         assertEquals(expected, actual);
     }
 
     @Test
     public void anUniverseWithACellOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getEmptyUniverseAnother();
+        String expected = getEmptyUniverse();
         String inputUniverse = "universe with one cell";
 
-        String actual = inputUniverse == "universe with one cell" ? getEmptyUniverseAnother() : getNotEmptyUniverse();
+        String actual = inputUniverse == "universe with one cell" ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
 
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getEmptyUniverseAnother();
+        String expected = getEmptyUniverse();
         String inputUniverse = "universe with two cells";
 
-        String actual = inputUniverse == "universe with two cells" ? getEmptyUniverseAnother() : getNotEmptyUniverse();
+        String actual = inputUniverse == "universe with two cells" ? getEmptyUniverse() : getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
 
     @Test
     public void anUniverseWithThreeNotNeighbouringCellsOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getEmptyUniverseAnother();
+        String expected = getEmptyUniverse();
         String inputUniverse = "universe with three cells not neighbors";
 
-        String actual = inputUniverse == "universe with three cells not neighbors" ? getEmptyUniverseAnother() : "not empty universe";
+        String actual = inputUniverse == "universe with three cells not neighbors" ? getEmptyUniverse() : "not empty universe";
 
         assertEquals(expected, actual);
     }
 
-    private String getEmptyUniverseAnother() {
+    private String getEmptyUniverse() {
         return "empty universe";
     }
 
