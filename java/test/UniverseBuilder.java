@@ -5,4 +5,8 @@ public class UniverseBuilder {
     public static String getUniverse() {
         return "universe";
     }
+
+    public static String getEmptyUniverse() {
+        return "empty " + getUniverse();
+    }
 }
