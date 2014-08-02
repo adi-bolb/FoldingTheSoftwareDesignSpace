@@ -17,4 +17,8 @@ public class UniverseBuilder {
     public static String cell() {
         return " cell";
     }
+
+    public static String with() {
+        return " with";
+    }
 }
