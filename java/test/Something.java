@@ -21,7 +21,7 @@ public class Something {
     @Test
     public void anUniverseWithACellOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithOneCell = getUniverse() + " with one cell";
+        String universeWithOneCell = UniverseBuilder.getUniverse() + " with one cell";
         String inputUniverse = universeWithOneCell;
 
         String actual = inputUniverse.equals(universeWithOneCell) ? getEmptyUniverse() : getNotEmptyUniverse();
@@ -32,7 +32,7 @@ public class Something {
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithTwoCells = getUniverse() + " with two cells";
+        String universeWithTwoCells = UniverseBuilder.getUniverse() + " with two cells";
         String inputUniverse = universeWithTwoCells;
 
         String actual = inputUniverse.equals(universeWithTwoCells) ? getEmptyUniverse() : getNotEmptyUniverse();
@@ -43,7 +43,7 @@ public class Something {
     @Test
     public void anUniverseWithThreeNotNeighbouringCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithThreeCellsNotNeighbours = getUniverse() + " with three cells not neighbors";
+        String universeWithThreeCellsNotNeighbours = UniverseBuilder.getUniverse() + " with three cells not neighbors";
         String inputUniverse = universeWithThreeCellsNotNeighbours;
 
         String actual = inputUniverse.equals(universeWithThreeCellsNotNeighbours) ? getEmptyUniverse() : getNotEmptyUniverse();
@@ -52,14 +52,10 @@ public class Something {
     }
 
     private String getEmptyUniverse() {
-        return "empty " + getUniverse();
-    }
-
-    private String getUniverse() {
-        return "universe";
+        return "empty " + UniverseBuilder.getUniverse();
     }
 
     private String getNotEmptyUniverse() {
-        return "not empty " + getUniverse();
+        return "not empty " + UniverseBuilder.getUniverse();
     }
 }
