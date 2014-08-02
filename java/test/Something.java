@@ -38,11 +38,15 @@ public class Something {
     }
 
     private String getEmptyUniverseRepeated() {
+        return getEmptyUniverseAgain();
+    }
+
+    private String getEmptyUniverseAgain() {
         return "empty universe";
     }
 
     private String getEmptyUniverse() {
-        return "empty universe";
+        return getEmptyUniverseAgain();
     }
 
 }
