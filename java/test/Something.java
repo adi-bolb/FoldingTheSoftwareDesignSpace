@@ -39,7 +39,11 @@ public class Something {
 
     @Test
     public void anUniverseWithThreeNotNeighbouringCellsOnTickTransformsIntoAnEmptyUniverse(){
-        assertEquals("empty universe", "not empty universe");
+        String expected = "empty universe";
+
+        String actual = "not empty universe";
+
+        assertEquals(expected, actual);
     }
 
     private String getNotEmptyUniverse() {
