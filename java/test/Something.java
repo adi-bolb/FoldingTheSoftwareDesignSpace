@@ -51,7 +51,8 @@ public class Something {
     }
 
     private String getEmptyUniverse() {
-        return "empty " + "universe";
+        String emptyUniverse = "empty " + "universe";
+        return emptyUniverse;
     }
 
     private String getUniverse() {
@@ -59,6 +60,7 @@ public class Something {
     }
 
     private String getNotEmptyUniverse() {
-        return "not empty " + "universe";
+        String notEmptyUniverse = "not empty " + "universe";
+        return notEmptyUniverse;
     }
 }
