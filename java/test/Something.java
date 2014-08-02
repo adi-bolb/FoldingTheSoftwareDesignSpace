@@ -29,12 +29,16 @@ public class Something {
 
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = "empty universe";
+        String expected = getEmptyUniverseRepeated();
         String inputUniverse = "universe with two cells";
 
-        String actual = inputUniverse == "universe with two cells" ? "empty universe" : "not empty universe";
+        String actual = inputUniverse == "universe with two cells" ? getEmptyUniverseRepeated() : "not empty universe";
 
         assertEquals(expected, actual);
+    }
+
+    private String getEmptyUniverseRepeated() {
+        return "empty universe";
     }
 
     private String getEmptyUniverse() {
