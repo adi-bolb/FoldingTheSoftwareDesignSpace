@@ -20,7 +20,7 @@ public class Something {
     @Test
     public void anUniverseWithACellOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithOneCell = getUniverseAnother() + " with one cell";
+        String universeWithOneCell = getUniverse() + " with one cell";
         String inputUniverse = universeWithOneCell;
 
         String actual = inputUniverse.equals(universeWithOneCell) ? getEmptyUniverse() : getNotEmptyUniverse();
@@ -31,7 +31,7 @@ public class Something {
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithTwoCells = getUniverseAnother() + " with two cells";
+        String universeWithTwoCells = getUniverse() + " with two cells";
         String inputUniverse = universeWithTwoCells;
 
         String actual = inputUniverse.equals(universeWithTwoCells) ? getEmptyUniverse() : getNotEmptyUniverse();
@@ -42,7 +42,7 @@ public class Something {
     @Test
     public void anUniverseWithThreeNotNeighbouringCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithThreeCellsNotNeighbours = getUniverseAnother() + " with three cells not neighbors";
+        String universeWithThreeCellsNotNeighbours = getUniverse() + " with three cells not neighbors";
         String inputUniverse = universeWithThreeCellsNotNeighbours;
 
         String actual = inputUniverse.equals(universeWithThreeCellsNotNeighbours) ? getEmptyUniverse() : getNotEmptyUniverse();
@@ -51,16 +51,16 @@ public class Something {
     }
 
     private String getEmptyUniverse() {
-        String emptyUniverse = "empty " + getUniverseAnother();
+        String emptyUniverse = "empty " + getUniverse();
         return emptyUniverse;
     }
 
-    private String getUniverseAnother() {
+    private String getUniverse() {
         return "universe";
     }
 
     private String getNotEmptyUniverse() {
-        String notEmptyUniverse = "not empty " + getUniverseAnother();
+        String notEmptyUniverse = "not empty " + getUniverse();
         return notEmptyUniverse;
     }
 }
