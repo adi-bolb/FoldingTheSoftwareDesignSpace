@@ -39,12 +39,16 @@ public class Something {
 
     @Test
     public void anUniverseWithThreeNotNeighbouringCellsOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = "empty universe";
+        String expected = getEmptyUniverseAnother();
         String inputUniverse = "universe with three cells not neighbors";
 
-        String actual = inputUniverse == "universe with three cells not neighbors" ? "empty universe" : "not empty universe";
+        String actual = inputUniverse == "universe with three cells not neighbors" ? getEmptyUniverseAnother() : "not empty universe";
 
         assertEquals(expected, actual);
+    }
+
+    private String getEmptyUniverseAnother() {
+        return "empty universe";
     }
 
     private String getNotEmptyUniverse() {
@@ -52,7 +56,7 @@ public class Something {
     }
 
     private String getEmptyUniverse() {
-        return "empty universe";
+        return getEmptyUniverseAnother();
     }
 
 }
