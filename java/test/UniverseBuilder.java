@@ -9,4 +9,8 @@ public class UniverseBuilder {
     public static String getEmptyUniverse() {
         return "empty " + getUniverse();
     }
+
+    public static String getNotEmptyUniverse() {
+        return "not empty " + getUniverse();
+    }
 }
