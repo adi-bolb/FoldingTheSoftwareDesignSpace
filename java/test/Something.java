@@ -20,7 +20,7 @@ public class Something {
     @Test
     public void anUniverseWithACellOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithOneCell = "universe" + " with one cell";
+        String universeWithOneCell = getUniverse() + " with one cell";
         String inputUniverse = universeWithOneCell;
 
         String actual = inputUniverse == universeWithOneCell ? getEmptyUniverse() : getNotEmptyUniverse();
@@ -31,7 +31,7 @@ public class Something {
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithTwoCells = "universe" + " with two cells";
+        String universeWithTwoCells = getUniverse() + " with two cells";
         String inputUniverse = universeWithTwoCells;
 
         String actual = inputUniverse == universeWithTwoCells ? getEmptyUniverse() : getNotEmptyUniverse();
@@ -42,7 +42,7 @@ public class Something {
     @Test
     public void anUniverseWithThreeNotNeighbouringCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getEmptyUniverse();
-        String universeWithThreeCellsNotNeighbours = "universe" + " with three cells not neighbors";
+        String universeWithThreeCellsNotNeighbours = getUniverse() + " with three cells not neighbors";
         String inputUniverse = universeWithThreeCellsNotNeighbours;
 
         String actual = inputUniverse == universeWithThreeCellsNotNeighbours ? getEmptyUniverse() : "not empty universe";
@@ -52,6 +52,10 @@ public class Something {
 
     private String getEmptyUniverse() {
         return "empty universe";
+    }
+
+    private String getUniverse() {
+        return "universe";
     }
 
     private String getNotEmptyUniverse() {
