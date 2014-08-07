@@ -13,7 +13,7 @@ public class Something {
         String expected = getUniverseBuilder().getEmptyUniverse();
         String inputUniverse = expected;
 
-        String actual = inputUniverse.equals(UniverseBuilder.getEmptyUniverse()) ? UniverseBuilder.getEmptyUniverse() : UniverseBuilder.getNotEmptyUniverse();
+        String actual = inputUniverse.equals(getUniverseBuilder().getEmptyUniverse()) ? getUniverseBuilder().getEmptyUniverse() : getUniverseBuilder().getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
@@ -21,10 +21,10 @@ public class Something {
     @Test
     public void anUniverseWithACellOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getUniverseBuilder().getEmptyUniverse();
-        String universeWithOneCell = UniverseBuilder.getUniverse() + UniverseBuilder.with() + " one" + UniverseBuilder.cell();
+        String universeWithOneCell = getUniverseBuilder().getUniverse() + getUniverseBuilder().with() + " one" + getUniverseBuilder().cell();
         String inputUniverse = universeWithOneCell;
 
-        String actual = inputUniverse.equals(universeWithOneCell) ? UniverseBuilder.getEmptyUniverse() : UniverseBuilder.getNotEmptyUniverse();
+        String actual = inputUniverse.equals(universeWithOneCell) ? getUniverseBuilder().getEmptyUniverse() : getUniverseBuilder().getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
@@ -32,10 +32,10 @@ public class Something {
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getUniverseBuilder().getEmptyUniverse();
-        String universeWithTwoCells = UniverseBuilder.getUniverse() + UniverseBuilder.with() + " two" + UniverseBuilder.cell();
+        String universeWithTwoCells = getUniverseBuilder().getUniverse() + getUniverseBuilder().with() + " two" + getUniverseBuilder().cell();
         String inputUniverse = universeWithTwoCells;
 
-        String actual = inputUniverse.equals(universeWithTwoCells) ? UniverseBuilder.getEmptyUniverse() : UniverseBuilder.getNotEmptyUniverse();
+        String actual = inputUniverse.equals(universeWithTwoCells) ? getUniverseBuilder().getEmptyUniverse() : getUniverseBuilder().getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
@@ -43,10 +43,10 @@ public class Something {
     @Test
     public void anUniverseWithThreeNotNeighbouringCellsOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getUniverseBuilder().getEmptyUniverse();
-        String universeWithThreeCellsNotNeighbours = UniverseBuilder.getUniverse() + UniverseBuilder.with() + " three" + UniverseBuilder.cell() + " not neighbors";
+        String universeWithThreeCellsNotNeighbours = getUniverseBuilder().getUniverse() + getUniverseBuilder().with() + " three" + getUniverseBuilder().cell() + " not neighbors";
         String inputUniverse = universeWithThreeCellsNotNeighbours;
 
-        String actual = inputUniverse.equals(universeWithThreeCellsNotNeighbours) ? UniverseBuilder.getEmptyUniverse() : UniverseBuilder.getNotEmptyUniverse();
+        String actual = inputUniverse.equals(universeWithThreeCellsNotNeighbours) ? getUniverseBuilder().getEmptyUniverse() : getUniverseBuilder().getNotEmptyUniverse();
 
         assertEquals(expected, actual);
     }
@@ -54,5 +54,4 @@ public class Something {
     private UniverseBuilder getUniverseBuilder() {
         return new UniverseBuilder();
     }
-
 }

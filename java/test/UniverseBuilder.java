@@ -2,23 +2,23 @@
  * Created by adi on 8/2/14.
  */
 public class UniverseBuilder {
-    public static String getUniverse() {
+    public String getUniverse() {
         return "universe";
     }
 
-    public static String getEmptyUniverse() {
+    public String getEmptyUniverse() {
         return "empty " + getUniverse();
     }
 
-    public static String getNotEmptyUniverse() {
+    public String getNotEmptyUniverse() {
         return "not empty " + getUniverse();
     }
 
-    public static String cell() {
+    public String cell() {
         return " cell";
     }
 
-    public static String with() {
+    public String with() {
         return " with";
     }
 }
