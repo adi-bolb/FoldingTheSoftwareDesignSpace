@@ -52,15 +52,19 @@ public class Something {
     }
 
     private UniverseBuilder getUniverseBuilder2() {
+        return getUniverseBuilderActual();
+    }
+
+    private UniverseBuilder getUniverseBuilderActual() {
         return new UniverseBuilder();
     }
 
     private UniverseBuilder getUniverseBuilder() {
-        return new UniverseBuilder();
+        return getUniverseBuilderActual();
     }
 
     private UniverseBuilder getUniverseBuilder1() {
-        return new UniverseBuilder();
+        return getUniverseBuilderActual();
     }
 
 }
