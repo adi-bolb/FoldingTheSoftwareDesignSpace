@@ -10,7 +10,7 @@ import static junit.framework.Assert.assertEquals;
 public class Something {
     @Test
     public void anEmptyUniverseOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = UniverseBuilder.getEmptyUniverse();
+        String expected = getUniverseBuilder().getEmptyUniverse();
         String inputUniverse = expected;
 
         String actual = inputUniverse.equals(UniverseBuilder.getEmptyUniverse()) ? UniverseBuilder.getEmptyUniverse() : UniverseBuilder.getNotEmptyUniverse();
@@ -20,7 +20,7 @@ public class Something {
 
     @Test
     public void anUniverseWithACellOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getUniverseBuilderActual().getEmptyUniverse();
+        String expected = getUniverseBuilder().getEmptyUniverse();
         String universeWithOneCell = UniverseBuilder.getUniverse() + UniverseBuilder.with() + " one" + UniverseBuilder.cell();
         String inputUniverse = universeWithOneCell;
 
@@ -31,7 +31,7 @@ public class Something {
 
     @Test
     public void anUniverseWithTwoCellsOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getUniverseBuilderActual().getEmptyUniverse();
+        String expected = getUniverseBuilder().getEmptyUniverse();
         String universeWithTwoCells = UniverseBuilder.getUniverse() + UniverseBuilder.with() + " two" + UniverseBuilder.cell();
         String inputUniverse = universeWithTwoCells;
 
@@ -42,7 +42,7 @@ public class Something {
 
     @Test
     public void anUniverseWithThreeNotNeighbouringCellsOnTickTransformsIntoAnEmptyUniverse(){
-        String expected = getUniverseBuilderActual().getEmptyUniverse();
+        String expected = getUniverseBuilder().getEmptyUniverse();
         String universeWithThreeCellsNotNeighbours = UniverseBuilder.getUniverse() + UniverseBuilder.with() + " three" + UniverseBuilder.cell() + " not neighbors";
         String inputUniverse = universeWithThreeCellsNotNeighbours;
 
@@ -51,7 +51,7 @@ public class Something {
         assertEquals(expected, actual);
     }
 
-    private UniverseBuilder getUniverseBuilderActual() {
+    private UniverseBuilder getUniverseBuilder() {
         return new UniverseBuilder();
     }
 
