@@ -8,6 +8,8 @@ import static junit.framework.Assert.assertEquals;
  * TDD as if you meant it
  */
 public class Something {
+    UniverseBuilder universeBuilder;
+
     @Test
     public void anEmptyUniverseOnTickTransformsIntoAnEmptyUniverse(){
         String expected = getUniverseBuilder().getEmptyUniverse();
@@ -52,6 +54,8 @@ public class Something {
     }
 
     private UniverseBuilder getUniverseBuilder() {
-        return new UniverseBuilder();
+
+        universeBuilder = new UniverseBuilder();
+        return universeBuilder;
     }
 }
