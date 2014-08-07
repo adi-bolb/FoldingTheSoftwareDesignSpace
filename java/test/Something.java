@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
@@ -9,6 +10,11 @@ import static junit.framework.Assert.assertEquals;
  */
 public class Something {
     UniverseBuilder universeBuilder;
+
+    @Before
+    public void setup(){
+        universeBuilder = new UniverseBuilder();
+    }
 
     @Test
     public void anEmptyUniverseOnTickTransformsIntoAnEmptyUniverse(){
@@ -55,7 +61,7 @@ public class Something {
 
     private UniverseBuilder getUniverseBuilder() {
 
-        universeBuilder = new UniverseBuilder();
+
         return universeBuilder;
     }
 }
