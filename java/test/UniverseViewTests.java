@@ -8,18 +8,14 @@ public class UniverseViewTests {
 
     @Test
     public void whenStartingAnEmptyUniverseIsShown(){
-        UniverseView universeView = new UniverseView();
         UniverseCollaborator universeCollaborator = mock(UniverseCollaborator.class);
+        UniverseView universeView = new UniverseView(universeCollaborator);
 
         universeView.show();
 
         verify(universeCollaborator).getUniverse();
     }
 
-    private interface UniverseCollaborator {
-        Universe getUniverse();
-    }
 
-    private class Universe {
-    }
 }
+
