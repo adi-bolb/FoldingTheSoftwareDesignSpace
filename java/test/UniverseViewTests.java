@@ -7,7 +7,7 @@ import static org.mockito.Mockito.verify;
 public class UniverseViewTests {
 
     @Test
-    public void whenStartingAnEmptyUniverseIsShown(){
+    public void whenStartingTheDefaultUniverseIsShown(){
         UniverseCollaborator universeCollaborator = mock(UniverseCollaborator.class);
         UniverseView universeView = new UniverseView(universeCollaborator);
 
@@ -15,6 +15,7 @@ public class UniverseViewTests {
 
         verify(universeCollaborator).getUniverse();
     }
+
 
 
 }
