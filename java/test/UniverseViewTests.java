@@ -15,9 +15,5 @@ public class UniverseViewTests {
 
         verify(universeCollaborator).getUniverse();
     }
-
-
-
-
 }
 

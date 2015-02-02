@@ -16,6 +16,4 @@ public class UniverseCollaboratorTests {
 
         verify(universeBuilder).getEmptyUniverse();
     }
-
-
 }
