@@ -3,8 +3,11 @@
  */
 public class UniverseAggregator implements UniverseCollaborator {
 
+    private UniverseBuilder universeBuilder;
+
     public UniverseAggregator(UniverseBuilder universeBuilder){
 
+        this.universeBuilder = universeBuilder;
     }
 
     @Override
