@@ -4,6 +4,6 @@
 public class TwoDimensionalOrthogonalUniverseBuilder implements UniverseBuilder {
     @Override
     public Universe getEmptyUniverse() {
-        return null;
+        return new Universe();
     }
 }
