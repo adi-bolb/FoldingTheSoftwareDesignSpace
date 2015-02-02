@@ -5,8 +5,11 @@ import org.omg.DynamicAny._DynAnyFactoryStub;
  */
 public class UniverseView {
 
+    private UniverseCollaborator universeCollaborator;
+
     public UniverseView(UniverseCollaborator universeCollaborator){
 
+        this.universeCollaborator = universeCollaborator;
     }
     public void show() {
 
