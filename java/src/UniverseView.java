@@ -8,10 +8,10 @@ public class UniverseView {
     private UniverseCollaborator universeCollaborator;
 
     public UniverseView(UniverseCollaborator universeCollaborator){
-
         this.universeCollaborator = universeCollaborator;
     }
-    public void show() {
 
+    public void show() {
+        universeCollaborator.getUniverse();
     }
 }
