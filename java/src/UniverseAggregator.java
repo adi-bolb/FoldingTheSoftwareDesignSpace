@@ -12,6 +12,6 @@ public class UniverseAggregator implements UniverseCollaborator {
 
     @Override
     public Universe getUniverse() {
-        return null;
+        return universeBuilder.getEmptyUniverse();
     }
 }

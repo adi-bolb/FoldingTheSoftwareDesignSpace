@@ -10,7 +10,7 @@ public class UniverseCollaboratorTests {
     @Test
     public void atFirstAnEmptyUniverseWillBeShown(){
         UniverseBuilder universeBuilder = mock(UniverseBuilder.class);
-        UniverseCollaborator universeCollaborator = new UniverseAggregator();
+        UniverseCollaborator universeCollaborator = new UniverseAggregator(universeBuilder);
 
         universeCollaborator.getUniverse();
 
